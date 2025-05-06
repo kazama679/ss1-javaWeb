@@ -1,0 +1,22 @@
++-------------+         +-------------+         +----------------+         +------------------+
+|   Browser   | <--->   | Web Server  | <--->   | Application    | <--->   |     Database     |
+|  (Client)   |  HTTP   | (Apache/Tomcat)|      | Server (Java EE)| JDBC   |  (MySQL, Oracle) |
++-------------+         +-------------+         +----------------+         +------------------+
+
+
+Mô Tả Thành Phần:
+
+Client (Trình duyệt):
+Gửi yêu cầu HTTP đến máy chủ web.
+Hiển thị nội dung HTML/CSS/JS nhận từ máy chủ.
+Web Server (Apache/Tomcat):
+Tiếp nhận yêu cầu từ client.
+Chuyển tiếp các yêu cầu liên quan đến xử lý logic đến Application Server.
+Trả lại phản hồi HTML cho client.
+Application Server (Java EE, Spring,...):
+Chứa toàn bộ logic nghiệp vụ của ứng dụng (business logic).
+Giao tiếp với CSDL thông qua JDBC hoặc ORM (Hibernate,...).
+Xử lý và trả dữ liệu cho Web Server.
+Database (MySQL, Oracle, PostgreSQL...):
+Lưu trữ dữ liệu ứng dụng (người dùng, sản phẩm, đơn hàng,...).
+Thực hiện các truy vấn dữ liệu thông qua SQL.
